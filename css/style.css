@@ -1,0 +1,366 @@
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "FuturaPT";
+    font-display: swap;
+    src:
+        local("FuturaPT"),
+        url("../fonts/FuturaPT-Book.woff2") format("woff2"),
+        url("../fonts/FuturaPT-Book.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: "FuturaPT";
+    font-display: swap;
+    src:
+        local("FuturaPT Bold"),
+        url("../fonts/FuturaPT-Bold.woff2") format("woff2"),
+        url("../fonts/FuturaPT-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 800;
+    font-style: normal;
+    font-family: "FuturaPT";
+    font-display: swap;
+    src:
+        local("FuturaPT ExtraBold"),
+        url("../fonts/FuturaPT-ExtraBold.woff2") format("woff2"),
+        url("../fonts/FuturaPT-ExtraBold.woff") format("woff");
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    background-color: #fff;
+    font-family: "FuturaPT", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-gold);
+    line-height: 1;
+}
+
+button, input {
+    font: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+  /* container */
+
+.container {
+    margin: 0 auto;
+    max-width: 1760px;
+    width: 100%;
+}
+
+:root {
+    --color-gold: #a89365;
+    --color-gray: #575757;
+}
+
+/*portfolio*/
+.portfolio-wrapper {
+    margin-bottom: 40px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-heading {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 800;
+}
+
+.portfolio-link {
+    padding-right: 28px;
+    font-size: 18px;
+    line-height: 24px;
+    background-image: url('../img/link-arrow.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    transition: scale .4s ease;
+}
+
+.portfolio-link:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-swiper {
+    margin-bottom: 40px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    position: relative;
+}
+
+.slide-title {
+    margin: 20px 0;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.slide-descr {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-gray);
+}
+
+.swiper-buttons {
+    top: 374px;
+    background-size: 16px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-button-prev {
+    left: 32px;
+    background-image: url("../img/swiper-btn-prev.svg");
+}
+
+.swiper-button-next {
+    right: 32px;
+    background-image: url("../img/swiper-btn-next.svg");
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+}
+
+.swiper-pagination {
+    position: relative;
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    margin-right: 20px;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet:last-child {
+    margin-right: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-gold);
+}
+
+.btns-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-order {
+    padding: 18.5px 0;
+    width: 360px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform .3s ease;
+}
+
+.btn-master {
+    margin-right: 20px;
+    color: var(--color-gold);
+    background-color: #fff;
+    border: 1px solid var(--color-gold);
+}
+
+.btn-master:hover {
+    transform: translateX(-10px);
+}
+
+.btn-project {
+    margin-left: 20px;
+    color: #fff;
+    background-color: var(--color-gold);
+    border: none;
+}
+
+.btn-project:hover {
+    transform: translateX(10px);
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .slide-img {
+        max-width: 270px;
+    }
+
+    .swiper-buttons {
+        top: 280px;
+        background-size: 8px 16px;
+    }
+
+    .swiper-button-prev {
+        left: 16px;
+    }
+    
+    .swiper-button-next {
+        right: 16px;
+    }
+
+    .btn-order {
+        padding: 11px 0;
+        width: 300px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+    .container {
+        max-width: 560px;
+    }
+
+    .portfolio-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .swiper-container {
+        margin-bottom: 20px;
+    }
+
+    .slide-img {
+        max-width: 270px;
+    }
+
+    .swiper-buttons {
+        display: none;
+    }
+
+    .swiper-pagination {
+        display: block;
+    }
+
+    .btns-wrapper {
+        flex-direction: column;
+    }
+
+    .btn-order {
+        padding: 11px 0;
+        width: 100%;
+    }
+
+    .btn-master {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn-project {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .portfolio-wrapper {
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portfolio-heading {
+        margin-bottom: 10px;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+
+    .portfolio-swiper {
+        margin-bottom: 20px;
+    }
+
+    .swiper-container {
+        margin-bottom: 20px;
+    }
+
+    .slide-title {
+        margin: 10px 0;
+    }
+
+    .swiper-buttons {
+        display: none;
+    }
+
+    .swiper-pagination {
+        display: block;
+    }
+
+    .btns-wrapper {
+        flex-direction: column;
+    }
+
+    .btn-order {
+        padding: 11px 0;
+        width: 100%;
+    }
+
+    .btn-master {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn-project {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
